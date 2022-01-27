@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.btn {
+		@apply block text-center outline-none font-medium cursor-pointer;
+	}
+	.btn.large {
+		@apply px-3 py-2 rounded-lg;
+	}
+	.btn.medium {
+		@apply px-4 py-3 rounded-md text-base;
+	}
+	.btn.small {
+		@apply px-3 py-2 rounded-sm text-base;
+	}
+	.btn.disabled {
+		@apply cursor-not-allowed;
+	}
+	.btn.primary-v3:not(.outline) {
+		@apply bg-primary-color-v3 text-white;
+	}
+	.btn.primary-charity {
+		@apply bg-primary-color-charity text-white;
+	}
+	.btn.outline {
+		@apply border-2 border-primary-text text-primary-text;
+	}
+	.btn.outline.primary-v3 {
+		@apply border-primary-color-v3;
+		@apply text-primary-color-v3;
+	}
+	.btn.outline.hover.primary-v3 {
+		@apply transition-all hover:bg-primary-color-v3 hover:text-primary-text;
+	}
+
+	.flex-h-center {
+		@apply flex;
+		@apply items-center;
+	}
+
+	.flex-v-center {
+		@apply flex;
+		@apply flex-col;
+		@apply items-center;
+	}
+
+	.flex-hv-center,
+	.flex-vh-center {
+		@apply flex;
+		@apply items-center;
+		@apply justify-center;
+	}
+
+	.flex-v {
+		@apply flex;
+		@apply flex-col;
+	}
+
+	.flex-center {
+		@apply flex;
+		@apply items-center;
+		@apply justify-center;
+	}
+}
+
+/* :root {
+	--primary-color: '#89CFF0';
+	--primary-triadic-1: '#90ed18';
+	--primary-triadic-2: '#1890ed';
+	--primary-complementary: '#18ed75';
+	--positive-cta-color: '#00b564';
+	--negative-cta-color: '#B50051';
+	--primary-text: 'white';
+	--secondary-text: '#A9A8A8';
+	--primary-bg: '#16171F';
+	--secondary-bg: '#191C26';
+	--tertiary-bg: '#252B3B';
+	--quartiary-bg: '#2F364B';
+	--primary-border: '#252B3B';
+	--secondary-border: '#363D54';
+	--tertiary-border: '#363D54';
+	--quartiary-border: '#363D54';
+} */
+
+body {
+	@apply tracking-normal;
+	@apply text-lg;
+	/* @apply font-medium; */
+	/* @apply bg-gray-800; */
+	@apply bg-primary-bg;
+	@apply text-secondary-text;
+	/* @apply w-screen; */
+	/* background-size: cover;
+	background: linear-gradient(
+		rgba(28, 31, 42, 1),
+		rgba(28, 31, 42, 0.85),
+		rgba(28, 31, 42, 1)
+		),
+		url('https://cdn.discordapp.com/attachments/833881089977090078/911793279815806996/ezgif-4-5d0f2865be0b.gif'); */
+
+	/* @apply overflow-hidden; */
+}
+body,
+html {
+	margin: 0;
+	padding: 0;
+	/* @apply h-screen; */
+}
+
+html {
+	min-height: fit-content;
+	max-width: 100vw;
+	/* overflow-x: hidden; */
+	@apply overflow-x-hidden;
+}
+
+#root,
+.app {
+	/* @apply h-full; */
+	@apply w-full;
+}
+
+.middle-ellipse {
+	position: relative;
+	width: 100px;
+}
+
+.middle-ellipse p {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.middle-ellipse:after {
+	content: attr(data-filetype);
+	position: absolute;
+	left: 100%;
+	top: 0;
+}
+
+body {
+	margin: 0 auto;
+	min-width: fit-content;
+	/* max-width: 100vw;
+	overflow: hidden; */
+	scroll-behavior: smooth;
+	@apply font-base;
+}
+
+#__next {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@apply font-bold;
+	@apply font-heading;
+	@apply text-primary-text;
+	@apply leading-relaxed !important;
+}
+
+h1 {
+	@apply text-3xl;
+}
+h2 {
+	@apply text-2xl;
+}
+h3 {
+	@apply text-xl;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	margin: 0;
+}
